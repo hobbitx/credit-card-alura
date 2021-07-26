@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__clojure_complete_0_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__nrepl_0_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_clojure_1_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_44.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_spec_alpha_0_2_176.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Clojure_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-card-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-alura.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Card.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Main.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Purchase.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Main.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +35,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Clojure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1627331104725">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1627333551808">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />

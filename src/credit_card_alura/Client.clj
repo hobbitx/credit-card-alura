@@ -13,8 +13,3 @@
   (println clients))
 
 
-(show-clients)
-(create-client "Robert" "13528838647" "robert.cristian@nubank.com.br")
-(create-client "Tha" "1325" "th")
-(println "Buscando  cliente" (get-client "13528838647"))
-(show-clients)

@@ -1,13 +1,19 @@
-(ns credit-card-alura.Card)
+(ns credit-card-alura.Card
+  (:require [credit-card-alura.Client :as clients]))
+
 
 (def cards [])
 
+(defn exist-client? [cpf] (clients/get-client cpf))
+
 (defn new-card [number cpf cvv validate limit]
-  (def cards (conj cards  { :cpf cpf, :number number, :cvv cvv, :validate validate :limit limit})))
+  (if (exist-client? cpf)
+    (def cards (conj cards  { :cpf cpf, :number number, :cvv cvv, :validate validate :limit limit}))
+    (println "Cliente não encontrado"))
+  )
 
 (defn get-client-cards [cpf]
   (filter #(= cpf (:cpf %)) cards))
 
-
-(new-card "002929" "13528838647" "455" "10/2031" 1000)
-(println (get-client-cards "13528838647"))
+(defn get-limit [number]
+  (:limit (first (filter #(= number (:number %)) cards))))
