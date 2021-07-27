@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Main.clj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
     </list>
@@ -35,6 +35,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Clojure" />
   </component>
   <component name="RecentsManager">
@@ -42,7 +45,7 @@
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1627333551808">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1627418443785">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />
@@ -107,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
