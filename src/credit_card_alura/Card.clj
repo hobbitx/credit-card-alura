@@ -19,13 +19,6 @@
 (defn get-limit [number]
   (get (first (filter #(= number (:number %)) cards)) :limit 0))
 
-(defn get-actual-limit [number]
-  (get (first (filter #(= number (:number %)) cards)) :actual-limit 0))
-
-
-(defn update-limit [number value]
-  (update (first (filter #(= number (:number %)) cards)) :limit value))
-
 
 
 

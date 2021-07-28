@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__clj_tuple_0_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__clojure_java_time_0_3_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-alura.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
@@ -45,7 +46,7 @@
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1627418443785">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1627509859183">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />

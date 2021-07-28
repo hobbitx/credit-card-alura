@@ -13,7 +13,7 @@
 
 (defn purchases-value
   ([card]
-  (reduce + (map #(+ 0 (:value %)) (get-purchases card))))
+   (reduce + (map #(+ 0 (:value %)) (get-purchases card))))
   ([_ sales]
    (reduce + (map #(+ 0 (:value %)) sales))
    ))
@@ -31,11 +31,23 @@
                           :category category, :establishment establishment
                           :pay      false}))
 
-    (println "Limite não disponivel")))
+    (println "Sem Limite")))
 
-(defn category
-  ([] (group-by :category purchases))
-  ([category] (group-by :category (filter #(= category (:category %)) purchases))))
+(defn group-by-category
+  ([collection] (group-by :category collection))
+  ([collection category] (group-by :category (filter #(= category (:category %)) collection))))
+
+
+(defn map-total-by-category
+  [[category itens]]
+  {
+    :category category
+    :total (purchases-value "" itens)
+    })
+
+(defn total-by-category
+  [card-numer]
+  (map #(map-total-by-category %)  (group-by-category (get-purchases card-numer))))
 
 (defn get-month [date] (as date :month-of-year))
 
@@ -46,12 +58,22 @@
    (filter #(= month (get-month (:date %))) sales)
    ))
 
+(defn purchases-by-value
+  ([value]
+   (filter #())
+   )
+  )
+
 (defn invoice
   ([card-number]
-  (let [actual-month (get-month (local-date))
-        sales (purchases-by-month actual-month (get-purchases card-number))]
-        (purchases-value "" sales)))
+   (let [actual-month (get-month (local-date))
+         sales (purchases-by-month actual-month (get-purchases card-number))]
+     {:card-number   card-number
+      :invoice-value (purchases-value "" sales)
+      }))
   ([card-number month]
    (let [sales (purchases-by-month month (get-purchases card-number))]
-         (purchases-value "" sales))
+     {:card-number   card-number
+      :invoice-value (purchases-value "" sales)
+      })
    ))
