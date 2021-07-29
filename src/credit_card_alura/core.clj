@@ -15,9 +15,11 @@
 (println (cards/get-client-cards "13528838647"))
 (println (cards/get-limit "002929"))
 
-(purchases/new-purchase "002929" (local-date) 200.0 "padaria" "alimentacao")
+(purchases/new-purchase "002929" (local-date) 500.0 "padaria" "alimentacao")
 (purchases/new-purchase "002929" (local-date) 400.0 "farmacia" "saude")
 
 (println "Compras" (purchases/get-purchases "002929"))
 (println (purchases/total-by-category "002929"))
 (println (purchases/invoice "002929" 7))
+
+(println (purchases/purchases-by-value 10 2000))
