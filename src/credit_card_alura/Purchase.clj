@@ -24,11 +24,12 @@
           {:card-number     (:number card), :date date, :value value,
            :category category, :establishment establishment
            :pay      false})
-    (println "Sem Limite ou cartão não encontrado")))
+    (do (println "Sem Limite ou cartão não encontrado")
+        purchases)))
 
 (defn group-by-category
-  ([collection purchases] (group-by :category collection))
-  ([collection category purchases] (group-by :category (filter #(= category (:category %)) collection))))
+  ([collection] (group-by :category collection))
+  ([collection category] (group-by :category (filter #(= category (:category %)) collection))))
 
 
 (defn map-total-by-category
@@ -38,7 +39,7 @@
 
 (defn total-by-category
   [card-number purchases]
-  (map #(map-total-by-category % card-number)  (group-by-category (get-purchases card-number purchases) purchases)))
+  (map #(map-total-by-category % card-number)  (group-by-category (get-purchases card-number purchases))))
 
 (defn get-month [date] (as date :month-of-year))
 
@@ -49,15 +50,12 @@
 (defn between [min max v]
   (and (<= v max) (>= v min )))
 
-(defn purchases-by-value
-  ([value purchases]
-   (sort-by #(:value %) (filter #(= value (:value %)) purchases)))
-  ([min max purchases]
-   (sort-by #(:value %) (filter #(between min max (:value %)) purchases))))
 
-(defn purchases-by-establishment
-  ([value purchases]
-   (filter #(= value (:establishment %)) purchases)))
+(defn filter-purchases
+  ([value key purchases]
+   (filter #(= value (key %)) purchases))
+  ([min max key purchases]
+   (filter #(between min max (key %)) purchases)))
 
 (defn invoice
   ([card-number purchases]
