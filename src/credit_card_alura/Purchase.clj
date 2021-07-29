@@ -32,13 +32,13 @@
 
 
 (defn map-total-by-category
-  [[category itens]]
+  [[category itens] card-number]
   {:category category
-    :total (purchases-value "" itens)})
+    :total (purchases-value card-number itens)})
 
 (defn total-by-category
-  [card purchases]
-  (map #(map-total-by-category %)  (group-by-category (get-purchases (:number card) purchases) purchases)))
+  [card-number purchases]
+  (map #(map-total-by-category % card-number)  (group-by-category (get-purchases card-number purchases) purchases)))
 
 (defn get-month [date] (as date :month-of-year))
 
