@@ -2,21 +2,21 @@
   (:require [credit-card-alura.Client :as clients]))
 (use 'java-time)
 
-(def cards [])
+(defn exist-client? [cpf clients] (clients/get-client cpf clients))
 
-
-(defn exist-client? [cpf] (clients/get-client cpf))
-
-(defn new-card [number cpf cvv validate limit]
-  (if (exist-client? cpf)
-    (def cards (conj cards  { :cpf cpf, :number number, :cvv cvv, :validate validate :limit limit :actual-limit limit}))
+(defn new-card [number cpf cvv validate limit cards clients]
+  (if (exist-client? cpf clients)
+    (conj cards {:cpf cpf, :number number, :cvv cvv, :validate validate :limit limit :actual-limit limit})
     (println "Cliente não encontrado")))
 
-(defn get-client-cards [cpf]
+(defn get-client-cards [cpf cards]
   (filter #(= cpf (:cpf %)) cards))
 
-(defn get-limit [number]
-  (get (first (filter #(= number (:number %)) cards)) :limit 0))
+(defn select-cards [card-number cards]
+  (first (filter #(= card-number (:number %)) cards)))
+
+(defn get-limit [card]
+  (:limit card))
 
 
 
