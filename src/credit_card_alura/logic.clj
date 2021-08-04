@@ -47,8 +47,10 @@
   (:limit card))
 
 (s/defn get-purchases :- [m/Purchase]
-  ([card-number purchases] (filter #(= card-number (:card-number %)) purchases))
-  ([purchases] purchases))
+  ([
+    card-number :- s/Str
+    purchases   :- [m/Purchase]]
+   (filter #(= card-number (:card-number %)) purchases)))
 
 (s/defn purchases-value :- m/ValorFinanceiro
   ([card-number purchases]
@@ -74,17 +76,20 @@
    card             :- m/Card,
    purchases        :- [m/Purchase]
    ]
-  (let [total (purchases-value (:number card) purchases)]
-    (if (has-limit? card value purchases)
+  (let [total (- (:limit card) (purchases-value (:number card) purchases))]
+    (if (and (has-limit? card value purchases) (> value 0))
       {
-       :card-number   (:number card),
+       :card-number   (str (:number card)),
        :date          date,
        :value         value,
        :category      category,
        :establishment establishment
        :pay           false
        }
-      (throw (ex-info "Cartao não tem limite disponivel" {:limit total}))
+      (if (> value 0)
+        (throw (ex-info "" {:purchase-value value :limit total :cause :card-not-valid-limit }))
+        (throw (ex-info "" {:purchase-value value :limit total :cause :purchase-value-not-valid}))
+        )
       )))
 
 (s/defn group-by-category

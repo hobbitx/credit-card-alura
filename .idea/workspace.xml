@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Card.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Client.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/Purchase.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/model.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/model.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Clojure Namespace" />
+        <option value="Clojure Test Namespace" />
       </list>
     </option>
   </component>
@@ -44,18 +42,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cursive.last.file.extension./Users/robert.cristiam/Documents/Repos/credit-card-alura/src" value="clj" />
+    <property name="cursive.last.file.extension./Users/robert.cristiam/Documents/Repos/credit-card-alura/test" value="clj" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Clojure" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1628025406348">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
-  <component name="RunManager">
+  <component name="ReplState" timestamp="1628104540623">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
+  <component name="RunManager" selected="Clojure REPL.REPL for credit-card-alura">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />
       <setting name="displayName" value="REPL for credit-card-alura" />
@@ -92,9 +91,17 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Run tests in credit-card-alura.logic-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="credit-card-alura" />
+      <option name="namespace" value="credit-card-alura.logic-test" />
+      <option name="selector" value="SINGLE_NS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Clojure REPL.REPL for credit-card-alura" />
+        <item itemvalue="clojure.test.Run tests in credit-card-alura.logic-test" />
       </list>
     </recent_temporary>
   </component>
@@ -124,5 +131,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/credit_card_alura$Run_tests_in_credit_card_alura_logic_test.ic" NAME="Run tests in credit-card-alura.logic-test Coverage Results" MODIFIED="1628093323123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

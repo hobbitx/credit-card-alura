@@ -7,12 +7,6 @@
 (def ValorFinanceiro (s/constrained s/Num maior-ou-igual-a-zero?))
 
 
-(def Client
-  {
-   :cpf   s/Str,
-   :name  s/Str,
-   :email s/Str
-   })
 
 (def Card
   {
@@ -37,6 +31,16 @@
    :establishment   s/Str,
    :pay             s/Bool
    })
+
+
+
+(def Client
+  {
+   :cpf   s/Str,
+   :name  s/Str,
+   :email s/Str,
+   })
+
 
 (def Invoice
   {
