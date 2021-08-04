@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_test_check_0_10_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/model.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/model.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-alura.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1628104540623">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1628110894760">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL for credit-card-alura">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />
