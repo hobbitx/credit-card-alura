@@ -52,14 +52,14 @@
     purchases   :- [m/Purchase]]
    (filter #(= card-number (:card-number %)) purchases)))
 
-(s/defn purchases-value :- m/ValorFinanceiro
+(s/defn purchases-value :- m/Money
   ([card-number purchases]
    (reduce + (map #(+ 0 (:value %)) (get-purchases card-number purchases)))))
 
 (s/defn has-limit? :- s/Bool
   [
    card       :- m/Card
-   value      :- m/ValorFinanceiro
+   value      :- m/Money
    purchases  :- [m/Purchase]
    ]
   (let [purchases-value (purchases-value (:number card) purchases)
@@ -69,10 +69,10 @@
 
 (s/defn new-purchase :- m/Purchase
   [
-   value            :- m/ValorFinanceiro,
-   date             :- m/Date,
-   establishment    :- s/Str,
-   category         :- s/Str,
+   value            :- m/Money,
+   date             :- m/StrNotBlank,
+   establishment    :- m/StrNotBlank,
+   category         :- m/StrNotBlank,
    card             :- m/Card,
    purchases        :- [m/Purchase]
    ]
@@ -99,7 +99,7 @@
    (group-by :category collection))
   ([
     collection  :- [m/Purchase]
-    category    :- s/Str
+    category    :- m/StrNotBlank
     ]
    (group-by :category (filter #(= category (:category %)) collection))))
 
@@ -107,16 +107,26 @@
 (s/defn map-total-by-category
   [
    [category itens]
-   card-number :- s/Str
+   card-number :- m/StrNotBlank
    ]
   {:category category
    :total (purchases-value card-number itens)})
+
+(defn format-date
+  [date-str]
+  (local-date "dd/MM/yyyy" date-str))
+
+(defn date-to-str
+  [date]
+  (format "dd/MM/YYYY" date)
+  )
+
 
 (s/defn total-by-category
   [card-number purchases]
   (map #(map-total-by-category % card-number)  (group-by-category (get-purchases card-number purchases))))
 
-(defn get-month [date] (:month-of-year date))
+(defn get-month [date] (:month-of-year (format-date date)))
 
 (s/defn purchases-by-month :- [m/Purchase]
   ([month purchases]
@@ -133,7 +143,7 @@
 
 (s/defn invoice :- m/Invoice
   ([
-    card-number :- s/Str
+    card-number :- m/StrNotBlank
     purchases   :- [m/Purchase]
     ]
    (let [actual-month (get-month (local-date))
@@ -141,8 +151,8 @@
      {:card-number   card-number
       :invoice-value (purchases-value card-number sales)}))
   ([
-    card-number :- s/Str
-    month       :- m/ValorFinanceiro
+    card-number :- m/StrNotBlank
+    month       :- m/Money
     purchases   :- [m/Purchase]]
    (let [sales (purchases-by-month month (get-purchases card-number purchases))]
      {:card-number   card-number

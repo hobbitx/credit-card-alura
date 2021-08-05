@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_test_check_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__prismatic_schema_generators_0_1_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/credit-card-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-alura.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/model.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/model.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +57,7 @@
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1628110894760">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1628194082751">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty \&quot;\&quot;)&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;\&quot;)&quot;, :offset 11, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;    \&quot;)&quot;, :offset 15, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL for credit-card-alura">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />
@@ -128,6 +131,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/credit_card_alura/logic.clj</url>
+          <line>143</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

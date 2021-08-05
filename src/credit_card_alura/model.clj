@@ -1,34 +1,35 @@
 (ns credit-card-alura.model
-  (:require [schema.core :as s]))
+  (:require [schema.core :as s]
+            [clojure.string :as str]))
 
 (use 'java-time)
 (s/set-fn-validation! true)
-(defn maior-ou-igual-a-zero? [x] (>= x 0))
-(def ValorFinanceiro (s/constrained s/Num maior-ou-igual-a-zero?))
-
+(defn more-or-equal-zero [x] (>= x 0))
+(def Money (s/constrained s/Num more-or-equal-zero))
+(defn notBlank? [x] (not (str/blank? x)))
+(def StrNotBlank (s/constrained s/Str notBlank?))
 
 
 (def Card
   {
-   :cpf          s/Str,
-   :number       s/Str,
+   :cpf          StrNotBlank,
+   :number       StrNotBlank,
    :cvv          s/Num,
-   :validate     s/Str,
-   :limit        ValorFinanceiro,
-   :actual-limit ValorFinanceiro
+   :validate     StrNotBlank,
+   :limit        Money,
+   :actual-limit Money
    })
 
 
-(println (s/validate ValorFinanceiro 1000.0))
+(println (s/validate Money 1000.0))
 
-(def Date java.time.LocalDate)
 (def Purchase
   {
-   :card-number     s/Str,
-   :date            Date,
-   :value           ValorFinanceiro,
-   :category        s/Str,
-   :establishment   s/Str,
+   :card-number     StrNotBlank,
+   :date            StrNotBlank,
+   :value           Money,
+   :category        StrNotBlank,
+   :establishment   StrNotBlank,
    :pay             s/Bool
    })
 
@@ -36,15 +37,15 @@
 
 (def Client
   {
-   :cpf   s/Str,
-   :name  s/Str,
-   :email s/Str,
+   :cpf   StrNotBlank,
+   :name  StrNotBlank,
+   :email StrNotBlank,
    })
 
 
 (def Invoice
   {
-   :card-number   s/Str
-   :invoice-value ValorFinanceiro
+   :card-number   StrNotBlank
+   :invoice-value Money
    })
 

@@ -22,9 +22,9 @@
   (println "\nLimite do cartao" (:number card) ": R$" (l/get-limit card)))
 
 (let [card (l/select-cards "002929" cards)]
-  (def purchases (conj purchases (l/new-purchase 700.0 (local-date) "padaria" "alimentacao" card purchases)))
-  (def purchases (conj purchases (l/new-purchase 100.0 (local-date) "farmacia" "saude" card purchases)))
-  (def purchases (conj purchases (l/new-purchase 200.0 (local-date) "farmacia" "saude" card purchases)))
+  (def purchases (conj purchases (l/new-purchase 700.0 (l/date-to-str (local-date))  "padaria" "alimentacao" card purchases)))
+  (def purchases (conj purchases (l/new-purchase 100.0 (l/date-to-str (local-date)) "farmacia" "saude" card purchases)))
+  (def purchases (conj purchases (l/new-purchase 200.0 (l/date-to-str (local-date)) "farmacia" "saude" card purchases)))
   (println "\nCompras" (l/get-purchases (:number card) purchases))
   (println "\nPor categoria" (l/total-by-category (:number card) purchases))
   (println "\nFatura total" (l/invoice (:number card) purchases)))
