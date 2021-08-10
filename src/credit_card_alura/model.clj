@@ -2,17 +2,18 @@
   (:require [schema.core :as s]
             [clojure.string :as str]))
 
-(use 'java-time)
 (s/set-fn-validation! true)
 (defn more-or-equal-zero [x] (>= x 0))
 (def Money (s/constrained s/Num more-or-equal-zero))
 (defn notBlank? [x] (not (str/blank? x)))
 (def StrNotBlank (s/constrained s/Str notBlank?))
+(def Map (s/pred map?))
 
+(defn uuid []
+  (java.util.UUID/randomUUID))
 
 (def Card
   {
-   :cpf          StrNotBlank,
    :number       StrNotBlank,
    :cvv          s/Num,
    :validate     StrNotBlank,
@@ -21,16 +22,16 @@
    })
 
 
-(println (s/validate Money 1000.0))
-
 (def Purchase
   {
-   :card-number     StrNotBlank,
-   :date            StrNotBlank,
-   :value           Money,
-   :category        StrNotBlank,
-   :establishment   StrNotBlank,
-   :pay             s/Bool
+
+   :purchase/card          Map,
+   :purchase/value         Money,
+   :purchase/category      StrNotBlank,
+   :purchase/date          StrNotBlank
+   :purchase/establishment StrNotBlank,
+   :purchase/pay           s/Bool
+   :purchase/uuid          s/Uuid
    })
 
 
@@ -45,7 +46,7 @@
 
 (def Invoice
   {
-   :card-number   StrNotBlank
+   :card-number   s/Num
    :invoice-value Money
    })
 
