@@ -2,60 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42ee382-e38f-4d68-aec8-41dfd59b5735" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_datomic_datomic_lucene_core_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_datomic_datomic_pro_1_0_6269.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_datomic_query_support_0_8_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_guava_guava_30_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_h2database_h2_1_3_171.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__commons_beanutils_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__commons_codec_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_buffer_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_codec_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_codec_http_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_codec_socks_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_common_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_handler_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_handler_proxy_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_resolver_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_transport_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_transport_native_epoll_4_1_48_Final_linux_x86_64.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_transport_native_kqueue_4_1_48_Final_osx_x86_64.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_netty_netty_transport_native_unix_common_4_1_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__net_spy_spymemcached_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_activemq_artemis_commons_2_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_activemq_artemis_core_client_2_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_geronimo_specs_geronimo_json_1_0_spec_1_0_alpha_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_httpcomponents_httpclient_4_5_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_johnzon_johnzon_core_0_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_tomcat_tomcat_jdbc_7_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_tomcat_tomcat_juli_7_0_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_cli_1_0_194.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_janino_commons_compiler_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_janino_commons_compiler_jdk_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_fressian_fressian_0_6_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jboss_logging_jboss_logging_3_4_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_slf4j_jcl_over_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_slf4j_log4j_over_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_slf4j_slf4j_nop_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/credit_card_alura/core_db.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/credit_card_alura/database.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-card-alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-alura.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/core.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit_card_alura/database.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/database.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/logic.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/credit_card_alura/model.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit_card_alura/model.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/credit_card_alura/logic_test.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +54,7 @@
       <recent name="$PROJECT_DIR$/src/credit_card_alura" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1628631973111">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty \&quot;\&quot;)&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;\&quot;)&quot;, :offset 11, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;    \&quot;)&quot;, :offset 15, :ns &quot;credit-card-alura.core&quot;} {:command &quot;constantly&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete-conn)&quot;, :offset 16, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(def purchase-schema [\n                      {:db/ident       :purchase/card\n                       :db/valueType   :db.type/ref\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/value\n                       :db/valueType   :db.type/double\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/category\n                       :db/valueType   :db.type/string\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/establishment\n                       :db/valueType   :db.type/string\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/pay\n                       :db/valueType   :db.type/bool\n                       :db/cardinality :db.cardinality/one}\n                      ])&quot;, :offset 900, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(def db-url \&quot;datomic:dev://localhost:4334/credit-card-db\&quot;)&quot;, :offset 59, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(defn create-conn []\n  (create-database)\n  (d/connect db-url))&quot;, :offset 62, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/create-database db-url)&quot;, :offset 27, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(d/create-database db-url)&quot;, :offset 26, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(def conn (db/create-conn))&quot;, :offset 28, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(db/create-schemas conn)&quot;, :offset 25, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n\n(db/create-schemas conn)&quot;, :offset 26, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(&lt;= 700 0)&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete- database)&quot;, :offset 21, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete-database)&quot;, :offset 20, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1628804504470">{:repl-history {:ide [], :local [{:command &quot;(first (filter #(= \&quot;002929\&quot; (:number %)) cards))&quot;, :offset 48, :ns &quot;credit-card-alura.core&quot;} {:command &quot;cards&quot;, :offset 5, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty \&quot;\&quot;)&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;\&quot;)&quot;, :offset 11, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(empty? \&quot;    \&quot;)&quot;, :offset 15, :ns &quot;credit-card-alura.core&quot;} {:command &quot;constantly&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete-conn)&quot;, :offset 16, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(def purchase-schema [\n                      {:db/ident       :purchase/card\n                       :db/valueType   :db.type/ref\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/value\n                       :db/valueType   :db.type/double\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/category\n                       :db/valueType   :db.type/string\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/establishment\n                       :db/valueType   :db.type/string\n                       :db/cardinality :db.cardinality/one}\n                      {:db/ident       :purchase/pay\n                       :db/valueType   :db.type/bool\n                       :db/cardinality :db.cardinality/one}\n                      ])&quot;, :offset 900, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(def db-url \&quot;datomic:dev://localhost:4334/credit-card-db\&quot;)&quot;, :offset 59, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(defn create-conn []\n  (create-database)\n  (d/connect db-url))&quot;, :offset 62, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/create-database db-url)&quot;, :offset 27, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(d/create-database db-url)&quot;, :offset 26, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(def conn (db/create-conn))&quot;, :offset 28, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n(db/create-schemas conn)&quot;, :offset 25, :ns &quot;credit-card-alura.core&quot;} {:command &quot;\n\n(db/create-schemas conn)&quot;, :offset 26, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(&lt;= 700 0)&quot;, :offset 10, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete- database)&quot;, :offset 21, :ns &quot;credit-card-alura.core&quot;} {:command &quot;(db/delete-database)&quot;, :offset 20, :ns &quot;credit-card-alura.core&quot;}], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL for credit-card-alura">
     <configuration name="REPL for credit-card-alura" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
       <module name="credit-card-alura" />
@@ -177,6 +128,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/credit_card_alura/database.clj</url>
+          <line>89</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

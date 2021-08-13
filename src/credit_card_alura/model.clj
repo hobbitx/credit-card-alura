@@ -14,11 +14,12 @@
 
 (def Card
   {
-   :number       StrNotBlank,
-   :cvv          s/Num,
-   :validate     StrNotBlank,
-   :limit        Money,
-   :actual-limit Money
+   :card/consumer-id              s/Num
+   :card/number                   StrNotBlank,
+   :card/cvv                      s/Num,
+   :card/validate                 StrNotBlank,
+   :card/limit                    Money,
+   (s/optional-key :card/actual-limit) Money
    })
 
 
@@ -38,9 +39,9 @@
 
 (def Client
   {
-   :cpf   StrNotBlank,
-   :name  StrNotBlank,
-   :email StrNotBlank,
+   :consumer/cpf   StrNotBlank,
+   :consumer/name  StrNotBlank,
+   :consumer/email StrNotBlank,
    })
 
 

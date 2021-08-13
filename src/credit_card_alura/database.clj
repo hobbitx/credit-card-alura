@@ -66,6 +66,7 @@
                :db/valueType   :db.type/boolean
                :db/cardinality :db.cardinality/one}
               ])
+
 (defn create-schemas
   [conn]
   (d/transact conn schemas))
@@ -87,27 +88,69 @@
          :where [?e :consumer/cpf ?search-cpf]] db cpf)
   )
 (defn get-cards [db]
-  (d/q '[:find  (pull ?e [*])
+  (d/q '[:find (pull ?e [*])
          :where [?e :card/number]] db)
   )
 (defn get-card-by-number [db number]
-  (d/q '[:find  (pull ?e [*])
+  (d/q '[:find (pull ?e [*])
          :in $ ?search-number
          :where [?e :card/number ?search-number]] db number)
   )
 
 (defn get-purchases-by-card
   [db card]
-  (d/q '[:find  (pull ?e [*])
+  (d/q '[:find (pull ?e [*])
          :in $ ?ref-card
          :where [?e :purchase/card ?ref-card]] db card)
   )
 
 (defn get-purchases
   [db]
-  (d/q '[:find  (pull ?e [*])
+  (d/q '[:find (pull ?e [*])
          :where [?e :purchase/card]] db)
   )
 
 (defn delete-database []
   (d/delete-database db-url))
+
+
+(defn get-max-purchase [db]
+  (d/q '[:find (pull ?e [*])
+         :where [(q '[:find (max ?value)
+                      :where [_ :purchase/value ?value]
+                      ]
+                    $)
+                 [[?search-value]]
+                 ]
+         [?e :purchase/value ?search-value]] db))
+
+
+(defn get-client-max-purchase [db]
+  (d/q '[:find (pull ?e [:purchase/value {:purchase/card [{:card/consumer-id [:consumer/name :consumer/cpf]}]}])
+         :where [(q '[:find (max ?value)
+                      :where [_ :purchase/value ?value]
+                      ]
+                    $)
+                 [[?search-value]]
+                 ]
+         [?e :purchase/value ?search-value]] db))
+
+
+(defn get-client-more-purchase [db]
+  (d/q '[:find (pull ?card [{:card/consumer-id [*]}]) ?qtd ?total
+         :keys card qtd total
+         :where [(q '[:find ?card (count ?value) (sum ?value)
+                      :keys card qtd total
+                      :with ?purchase
+                      :where [?purchase :purchase/value ?value]
+                             [?purchase :purchase/card ?card]] $)
+                 [[?card ?qtd ?total]]]] db))
+
+(defn get-more-purchase [db]
+  (d/q '[
+         :find ?card (count ?value) (sum ?value)
+         :keys card qtd total
+         :with ?purchase
+         :where [?purchase :purchase/value ?value]
+         [?purchase :purchase/card ?card]
+         ] db))

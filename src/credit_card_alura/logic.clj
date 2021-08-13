@@ -13,9 +13,9 @@
   [name :- s/Str,
    cpf :- s/Str,
    email :- s/Str]
-  (let [client {:consumer/cpf cpf, :consumer/name name, :consumer/email email}
-        result @(db/add conn [client])]
-    {:cpf cpf, :name name, :email email}))
+  (let [client {:consumer/cpf cpf, :consumer/name name, :consumer/email email}]
+    (db/add conn [client])
+    client))
 
 
 (s/defn get-client
@@ -32,8 +32,7 @@
   ([]
    (db/get-clients (db/get-db conn))))
 
-
-(s/defn new-card
+(s/defn new-card :- (s/maybe m/Card)
   [id :- s/Num,
    number :- s/Str,
    cvv :- s/Num,
@@ -45,22 +44,25 @@
               :card/validate    validate
               :card/limit       limit}
         result @(db/add conn [card])]
-    result))
+     card))
 
-(s/defn get-client-cards [cpf cards]
-  (filter #(= cpf (:cpf %)) cards))
 (defn get-cards []
   (db/get-cards (db/get-db conn)))
+
+(defn client-more-purchase []
+  (let [clients (db/get-client-more-purchase (db/get-db conn))
+        max  (apply max-key :qtd clients)]
+    (p/pprint max)
+    max
+    ))
+
+(defn client-max-purchases []
+  (ffirst (db/get-client-max-purchase (db/get-db conn))))
 
 (s/defn select-cards
   [card-number :- s/Str]
   (first (first (db/get-card-by-number (db/get-db conn) card-number))))
 
-(defn get-limit [card]
-  (let [purchases-value (purchases-value (:db/id card))
-        total-limit (:card/limit card)
-        ]
-    (- total-limit purchases-value)))
 
 
 (defn get-purchases
@@ -80,6 +82,14 @@
          (reduce + purchase-map)))
      )
    ))
+
+(s/defn get-limit :- m/Money
+  [card]
+  (let [purchases-value (purchases-value (:db/id card))
+        total-limit (:card/limit card)
+        ]
+    (- total-limit purchases-value)))
+
 
 (s/defn has-limit? :- s/Bool
   [
@@ -113,16 +123,8 @@
         ]
     (if (> value 0)
       (if (has-limit? card value)
-        (do @(db/add conn [purchase])
-            {
-             :purchase/card          card,
-             :purchase/date          date,
-             :purchase/value         value,
-             :purchase/category      category,
-             :purchase/establishment establishment
-             :purchase/pay           false
-             :purchase/uuid          (:purchase/uuid purchase)
-             }
+        (do (db/add conn [purchase])
+            purchase
             )
         (throw (ex-info "" {:purchase-value value :limit total :card card :cause :card-not-valid-limit})))
       (throw (ex-info "" {:purchase-value value :limit total :cause :purchase-value-not-valid})))))
