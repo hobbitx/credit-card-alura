@@ -132,9 +132,7 @@
 (s/defn group-by-category
   ([]
    (group-by :purchase/category (get-purchases)))
-  ([
-    category :- m/StrNotBlank
-    ]
+  ([category :- m/StrNotBlank]
    (group-by :purchase/category (filter #(= category (:purchase/category %)) (get-purchases)))))
 
 
@@ -146,14 +144,12 @@
     {:category key
      :total    (reduce + values)}))
 
-(s/defn total-by-category
-  []
+(s/defn total-by-category []
   (let [group-by (group-by-category)]
     (map #(map-total-by-category %) group-by)))
 
 (defn get-month [date]
   (as date :month-of-year))
-
 
 (defn between [min max v]
   (and (<= v max) (>= v min)))
@@ -175,17 +171,12 @@
 
 (defn purchases-by-month [purchases]
   (let [actual-month (get-month (local-date))]
-    (filter #(= actual-month (get-month (format-date (:purchase/date %)))) purchases))
-  )
+    (filter #(= actual-month (get-month (format-date (:purchase/date %)))) purchases)))
 
 (s/defn invoice :- m/Invoice
-  ([
-    card-number :- s/Num
-    ]
-   (let [
-         purchases (get-purchases card-number)
-         sales (purchases-by-month purchases)
-         ]
+  ([card-number :- s/Num]
+   (let [purchases (get-purchases card-number)
+         sales (purchases-by-month purchases)]
      {:card-number   card-number
       :invoice-value (reduce + (map #(:purchase/value %) sales))})))
 
